@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Data and model artifacts
+data/*
+!data/.gitkeep
+outputs/checkpoints/*
+!outputs/checkpoints/.gitkeep
+outputs/logs/*
+!outputs/logs/.gitkeep
+outputs/tables/*
+!outputs/tables/.gitkeep
+outputs/figures/*
+!outputs/figures/.gitkeep
+
+# Large/derived scientific files
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.edf
+*.rml
+*.xml
+*.mat
+*.h5
+*.hdf5
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
