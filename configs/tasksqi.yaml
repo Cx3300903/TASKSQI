@@ -1,0 +1,25 @@
+seed: 42
+device: auto
+data:
+  shhs_npz: data/shhs_c4a1_125hz_epochs.npz
+  split_dir: splits_official_like
+  normalize: subject
+  input_samples: 3750
+teacher:
+  checkpoint: outputs/checkpoints/teacher.pt
+  architecture: official_shhs
+tasksqi:
+  batch_size: 128
+  epochs: 50
+  patience: 8
+  lr: 0.001
+  weight_decay: 0.0001
+  mixed_precision: true
+  resume: null
+  target_type: retention
+  clean_probability: 0.2
+  stage_balanced: true
+outputs:
+  checkpoint: outputs/checkpoints/tasksqi_retention.pt
+  target_cache: outputs/checkpoints/quality_targets_retention.npz
+  log_dir: outputs/logs
